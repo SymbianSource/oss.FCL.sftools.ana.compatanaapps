@@ -1,0 +1,214 @@
+===============================================================================
+
+RELEASE NOTES - COMPATIBILITY ANALYSER v2.8.0
+RELEASED 19th June 2009 
+
+SUPPORTS S60 3.0+
+
+===============================================================================
+
+Product Description:
+====================
+
+Compatibility Analyser compares a set of files in two different versions of S60
+releases against predefined Binary Compatibility (BC) criteria, and reports any
+changes that affect BC. The analysis is done on header files or import
+libraries of the platform. Preserving BC is central in S60 development to
+ensure that any executable that was built against an older version (for
+example, S60 3.0 platform) can be run without changes on a newer version of the
+platform (for example, S60 3.1 onwards). The comparison is made between a
+baseline version of an S60 release (for example, a Public SDK from Forum Nokia)
+and a newer, current SDK version that needs to be verified. Compatibility
+reports can be filtered so that they compare the found issues against a known
+issues file. This file (knownissues.xml) contains information on whether or not
+the same BC problems have occurred before in the S60 Platform and what should
+be done about them.
+
+Compatibility Analyser uses three additional utilities for the analysis process,
+HeaderAnalyser, LibraryAnalyser and BCFilter. Please see the release notes of
+those tools for details.
+
+Main Features:
+==============
+- By using static analysis for header and import library files, you can find
+  binary and source compatibility issues by comparing a baseline and current
+  release
+- Analysis can be done for a whole release, for a set of files or for a single
+  file
+- Generated report files can be filtered by using a known issues file 
+
+===============================================================================
+
+What's New in v2.8.0
+====================
+- Feature: Added support to verify .rh files
+- Feature: Possible to view only BC Issues / SC Issues / Both
+- Feature: Added 5.1 dll list
+- Change: Possible to give multiple build targets
+- Change: Informative issues in library report will be hidden
+- Change: Library report color coding made similar to Header report
+- Change: Compilation error cause displayed on tool tip
+- Fix: ChekcBC now throws error if knownissues server path is invalid
+- Updated HeaderAnalyser to version 1.6.0
+- Updated knownissues.xml. Old invalid issues removed.
+
+===============================================================================
+
+Installation Notes:
+===================
+Compatibility Analyser is part of the BCTools package. It is preinstalled in
+all S60 RnD/OEM releases under [EPOCROOT]\epoc32\tools\s60rndtools\bctools
+directory.
+
+===============================================================================
+
+System Requirements:
+====================
+Basic Requirements:
+- Windows 2000 or XP with 256MB RAM
+- Python 2.4-2.6
+
+===============================================================================
+
+Compatibility Issues:
+=====================
+N/A
+
+===============================================================================
+
+Known Issues:
+=============
+N/A
+  
+===============================================================================
+
+Version History:
+================
+
+Version 2.7.1 - 28th April 2009
+--------------------------------
+- Fix: Knownissues document type definition fixed to match the updated 
+  LibraryAnalyser report format
+- Fix: CheckBC now accepts any URL path for knownissues file
+- Updated knownissues.xml
+
+Version 2.7.0 - 7th April 2009
+--------------------------------
+- Change: OrdinalChecker re-branded as LibraryAnalyser
+- Feature: LibraryAnalyser now analyses dll files also
+- Feature: The tool can now be used with 9.2 and Symbian Foundation codelines
+- Feature: Component speicific forced headers introduced through platform data
+- Change: CDS scripts parses .mmpi and .mmh files also to create platform data
+- Fix: checkbc includes incorrect forced header for 5.0 sdk
+- Updated HeaderAnalyser to version 1.5.0
+- Updated LibraryAnalyser to version 3.3.0
+- Updated knownissues.xml
+
+Version 2.6.0 - 17th February 2009 
+--------------------------------
+- Feature: Added support to verify source compatibility breaks
+- Feature: Added support for displaying baseline and curent platform versions
+- Feature: Information to end-user if the issue was found previously but the 
+  header has some other unrelated changes
+- Change: Updated include paths for S60 5.1
+- Change: .h;.hrh;.mbg;.rsg;.hpp;.pan are now default file extensions  
+- Change: Harmonized default report filenames with Compatibility Analyser 
+  carbide plugin
+- Change: Default system includes will be included when used with 
+  BASELINE_HEADERS & CURRENT_HEADERS tags
+- Change: In the CDS scripts, .pan and .hpp files included in platform data
+- Fix: Compilation error fixes
+- Fix: In the CDS scripts, exports which dint have a target filename but only
+  path were not included in the platform data
+- Fix: Relative path issues in config file fixed
+- Updated HeaderAnalyser to version 1.4.0
+- Updated OrdinalChecker to version 3.2.0
+- Updated BCFilter to version 1.3.0
+- Updated knownissues.xml
+
+Version 2.5.1 - 8th January 2009 
+--------------------------------
+- Fix: when in "view ok issues" view, "close diff view" does not return to
+  report page main view 
+- Updated knownissues.xml
+
+Version 2.5.0 - 9th December 2008 
+--------------------------------
+- Removed checkbc.cmd interface
+- Fix: Exclusion of directory did not work
+- Fix: knownissues.xml provided with the tool should have been the default file
+  for filtering
+- Fix: Report file displays "known issues" "platform versions" even if
+  filtering is not done
+- Updated HeaderAnalyser to version 1.3.2
+- Updated knownissues.xml
+
+Version 2.4.0 - 14th November 2008
+--------------------------------
+- Updated HeaderAnalyser to version 1.3.1
+- Updated knownissues.xml
+
+Version 2.3.0 - 21st October 2008
+--------------------------------
+- Feature: Added support for S60 5.1
+- Feature: CheckBC interface now works in Linux environment
+- Feature: Diff view in the report can be now easily closed
+- Fix: Recursive on should been the default setting
+- Fix: Empty paths for files to be filtered where handled incorrectly   
+- Change: Generated reports are now filtered immediately instead of waiting all
+  reports being generated
+- Updated HeaderAnalyser to version 1.3.0
+- Updated OrdinalChecker to version 3.1.0
+- Updated BCFilter to version 1.2.0
+- Updated knownissues.xml
+
+Version 2.2.2 - 3rd October 2008
+--------------------------------
+- Updated knownissues.xml
+
+Version 2.2.1 - 19th September 2008
+-----------------------------------
+- Updated knownissues.xml
+
+Version 2.2.0 - 29th August 2008
+--------------------------------
+- Updated HeaderAnalyser to version 1.2.6
+
+Version 2.1.0 - 20th August 2008
+--------------------------------
+- Feature: Ok cases can be viewed separately in the report file
+- Change: Paths of output report files are now optional. If they are not
+  specified, they will be created under the "reports" directory
+- Change: Diff link in the report opens now in the same window to avoid several
+  problems in different environments
+- Change: Default system include paths are now platform specific
+- Fix: Diff and link to the header file did not work with the Firefox browser
+- Fix: Recursion for header files was handled incorrectly
+- Fix: Exclude dirs functionality for header files was handled incorrectly
+- Fix: Relative paths were not handled correctly
+- Updated HeaderAnalyser to version 1.2.5
+- Updated OrdinalChecker to version 3.0.7
+- Updated BCFilter to version 1.1.6
+- Updated knownissues.xml
+
+Version 2.0.0 - 8th July 2008
+-----------------------------
+- Change: CheckBC has been rebranded as Compatibility Analyser
+- Change: Completely renewed commandline parameters and config file format
+- Change: The new CheckBC interface can now be found from the root level -
+  the old CheckBC interface still exists under the scripts directory for those
+  users who do not yet want to migrate to the new one
+- Updated HeaderAnalyser to version 1.2.4
+- Updated OrdinalChecker to version 3.0.6
+- Updated BCFilter to version 1.1.5
+- Updated knownissues.xml
+
+===============================================================================
+
+Copyright (c) 2001-2009 Nokia Corporation and/or its subsidiary(-ies). 
+All rights reserved.
+
+This component and the accompanying materials are made available
+under the terms of the License "Symbian Foundation License v1.0"
+which accompanies this distribution, and is available
+at the URL "http://www.symbianfoundation.org/legal/sfl-v10.html".

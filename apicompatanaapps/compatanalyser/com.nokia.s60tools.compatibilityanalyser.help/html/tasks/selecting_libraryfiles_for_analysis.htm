@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Selecting library files for analysis</title>
+<link href="../../book.css" type="text/css" rel="stylesheet"></head>
+<body>
+
+<h2>Selecting library files for analysis</h2>
+<h5>Before you start</h5>
+<p>Before you can add import libraries for analysis, the analysis type and the
+current SDK must be selected first. For instructions, see <a href="select_analysis_type.htm">
+Selecting the analysis type, baseline profile and current SDK</a>.</p>
+<p><b>Important:</b> Library files (.lib and .dso) have specific toolchain requirements
+for file creation. See <a href="../gettingstarted/preconditions.htm#toolchain">
+GCCE and RVCT toolchain</a>.</p>
+<p><b>Note:</b> Library files are handled differently in EXE and DLL projects. See <a href="../concepts/file_handling.htm">
+File handling in project and folder analysis</a> for more information.</p>
+<p>To select library files, follow these steps:</p>
+<ol>
+<li>To specify the root directory for the files, you can either: 
+	<ul>
+	<li>Analyse files from the default build target (default). </li>
+	<li>Analyse files from the selected build target directory. </li>
+	<li>Select the third option and click <b>Browse</b> to choose library and dll files from local file system paths. </li>
+	</ul>
+</li>
+<li>To specify which libraries are analysed, you can either:
+	<ul>
+	<li>Analyse all the files that are available in the specified directory.</li>
+	<li>Select the second option and click <b>Add Files</b> to choose a specific 
+	.dso file in a separate dialog.</li>
+	</ul>
+	<p>The tool analyses corresponding dll files, either from the urel folder of selected build target or from the provided
+	local directories. </p>
+</li>
+<li>Select the compiler tool set that is used to read exports from import
+libraries in the release. Normally, the default value (CSL Arm Toolchain)
+should be used but this can be changed if needed. </li>
+<li>Click <b>Next</b> to <a href="configuring_report_options.htm">configuring
+report file options</a>.</li>
+</ol>
+
+<h5>Related concepts</h5>
+<ul>
+	<li><a href="../concepts/header_and_library.htm">Header and library files in preserving compatibility</a></li>
+</ul>
+
+<div id="footer">Copyright &copy; 2008, 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. 
+License: <a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>.</div>
+</body>
+</html>

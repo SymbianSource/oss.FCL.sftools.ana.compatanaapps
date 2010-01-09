@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.index"?>
+
+	<!-- INDEX INSTRUCTIONS
+	
+	Use the index.xml file to define the index entries for the plugin's 
+	help contents. In Eclipse 3.2 and beyond an Index tab appears in the Help
+	viewer making it possible for user to more easily locate subjects of
+	interest to them.
+		
+	In brief, every file used in the help documentation should have at least one
+	associated index entry for it. Ideally, it's simple to make two entries per
+	page by simply re-wording the subject slightly. For example, a view could
+	be indexed twice like this, 1) Breakpoint view, and 2) Views/Breakpoint.
+	
+	-->
+
+<index>
+
+	
+	<entry keyword="compatibility analyser" >
+		<topic href="html/gettingstarted/GS_index.htm.htm" />
+	</entry>
+
+	<entry keyword="binary compatibility" >
+		<topic href="html/concepts/binary_compatibility.htm" />
+	</entry> 
+	
+	<entry keyword="hrh file" >
+		<topic href="html/concepts/header_and_library.htm" />
+	</entry>
+
+	<entry keyword="header" >
+		<topic href="html/concepts/header_and_library.htm" />
+	</entry> 
+
+	<entry keyword="library" >
+		<topic href="html/concepts/header_and_library.htm" />
+	</entry>
+
+	<entry keyword="mbg file" >
+		<topic href="html/concepts/header_and_library.htm" />
+	</entry>
+
+	<entry keyword="rsg file" >
+		<topic href="html/concepts/header_and_library.htm" />
+	</entry>
+
+	<entry keyword="baseline SDK" >
+		<topic href="html/concepts/software_development_kit.htm" />
+	</entry> 
+
+	<entry keyword="current SDK" >
+		<topic href="html/concepts/software_development_kit.htm" />
+	</entry>
+
+	<entry keyword="creating baseline profile" >
+		<topic href="html/tasks/configuring_baselineprofile.htm" />
+	</entry> 
+
+	<entry keyword="configure knownissues" >
+		<topic href="html/tasks/configuring_knownissues.htm" />
+	</entry> 
+
+	<entry keyword="knownissues.xml" >
+		<topic href="html/tasks/configuring_knownissues.htm" />
+	</entry> 
+
+	<entry keyword="filter reports" >
+		<topic href="html/tasks/filtering_existing_reports.htm" />
+	</entry> 
+	
+	<entry keyword="viewing report" >
+		<topic href="html/tasks/viewing_the_report.htm" />
+	</entry>
+	
+	<entry keyword="configuration file" >
+		<topic href="html/tasks/saving_the_configuration_to_file.htm" />
+	</entry>
+
+	<entry keyword="comptanalyser file" >
+		<topic href="html/tasks/saving_the_configuration_to_file.htm" />
+	</entry>
+	
+</index>
+
+

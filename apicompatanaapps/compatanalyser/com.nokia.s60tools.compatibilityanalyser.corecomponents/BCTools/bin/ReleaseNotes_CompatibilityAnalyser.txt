@@ -1,0 +1,192 @@
+===============================================================================
+
+RELEASE NOTES - COMPATIBILITY ANALYSER v2.8.3
+RELEASED 2nd December 2009 
+
+SUPPORTS S60 5.0+
+
+===============================================================================
+
+Product Description:
+====================
+
+Compatibility Analyser compares a set of files in two different versions of S60
+releases against predefined Binary Compatibility (BC) criteria, and reports any
+changes that affect BC. The analysis is done on header files or import
+libraries of the platform. Preserving BC is central in S60 development to
+ensure that any executable that was built against an older version (for
+example, S60 5.0 platform) can be run without changes on a newer version of the
+platform (for example, S60 5.1 onwards). The comparison is made between a
+baseline version of an S60 release (for example, a Public SDK from Forum Nokia)
+and a newer, current SDK version that needs to be verified. Compatibility
+reports can be filtered so that they compare the found issues against a known
+issues file. This file (knownissues.xml) contains information on whether or not
+the same BC problems have occurred before in the S60 Platform and what should
+be done about them.
+
+
+Main Features:
+==============
+- By using static analysis for header and import library files, you can find
+  binary and source compatibility issues by comparing a baseline and current
+  release
+- Analysis can be done for a whole release, for a set of files or for a single
+  file
+- Generated report files can be filtered by using a known issues file 
+
+===============================================================================
+
+What's New in v2.8.3
+====================
+- Change: In HA:- Multiple threading logic is made configurable. By default it is disabled. 
+  "-usethread" is the param. If not mentioned in HA command option, threading logic will be disabled.
+- Checkbc.py supports Multiple thread using Config param.
+  For Public vs Rnd SDK analysis or for small no of header analysis (<3000), set the "USE_THREAD" in config_template as "true".
+  For Rnd vs Rnd sdk analysis or large no. of headers analysis, keep the "USE_THREAD" as "false" or empty.  
+- Fix: In HA:- For overloaded functions, the mangled attribute wil also be checked with functiion name present in gccxml output.
+- Fix: In HA:- For GCC XML compilation, __GNUC__ macro should be enabled instead of __GCCE__.
+- Fix: In HA:- The CA core toolset throws error when executed from desktop
+- Fix: In HA:- When issue reported as "file cannot be analysed", set the line No to 0 in report.
+- Stylesheet is updated with the fix reported by PMO and is having the severity wise sorting also.
+- Updated HeaderAnalyser to version 1.6.3
+- Updated LibraryAnalyser to version 3.3.2
+- Updated BCFilter to version 1.3.1
+- Nokia copyright changes are updated in source codes.
+- Updated knownissues.xml
+
+
+===============================================================================
+
+Installation Notes:
+===================
+Compatibility Analyser is part of the FTS package. It is available under 
+fts\compatibilityanalyser\ directory.
+
+===============================================================================
+
+System Requirements:
+====================
+Basic Requirements:
+- Windows 2000 or XP with 256MB RAM
+- Python 2.4-2.6
+
+===============================================================================
+
+Compatibility Issues:
+=====================
+N/A
+
+===============================================================================
+
+Known Issues:
+=============
+N/A
+  
+===============================================================================
+
+Version History:
+================
+Version 2.8.2 - 18th September 2009
+--------------------------------
+- Change: In HA:- HeaderAnalyser should report the line number for each break in a file
+  This will give line number for each file where any break related to macros,struct,enums etc occured.
+- Change: In LA:- Performance improvement done.
+  Parser logic is changed. Both baseline and current DLL data file will be parsed with SAX parser. 
+- Unwanted DLL entries are removed from 5.0,5.1 and 5.2 dll data xml files.
+- Checkbc will throw proper error for all error cases.
+- Updated HeaderAnalyser to version 1.6.2
+- Updated LibraryAnalyser to version 3.3.1
+- Updated knownissues.xml
+
+Version 2.8.1 - 17th August 2009
+--------------------------------
+- Fix: In HA:- files having dupliacted guards in the same bundle of files will be considered invalid and will be compiled individually.
+  this solved the problem during both compilation and macro analysis. no need need to compile the headers again during macro analysis.  
+- Fix: In HA:- fix for the template class related issue 
+- Fix: In HA:- API info will be displayed with header breaks in the report
+- Fix: In CDS script:- API info for each header will be queried from kevlar and will be written in platform data file
+- Stylesheet is updated to display API info for headers in the report file
+- Updated HeaderAnalyser to version 1.6.1
+- Updated knownissues.xml
+
+Version 2.8.0 - 19th june 2009
+--------------------------------
+- Feature: Added support to verify .rh files
+- Feature: Possible to view only BC Issues / SC Issues / Both
+- Feature: Added 5.1 dll list
+- Change: Possible to give multiple build targets
+- Change: Informative issues in library report will be hidden
+- Change: Library report color coding made similar to Header report
+- Change: Compilation error cause displayed on tool tip
+- Fix: ChekcBC now throws error if knownissues server path is invalid
+- Updated HeaderAnalyser to version 1.6.0
+- Updated knownissues.xml. Old invalid issues removed.
+
+Version 2.7.1 - 28th April 2009
+--------------------------------
+- Fix: Knownissues document type definition fixed to match the updated 
+  LibraryAnalyser report format
+- Fix: CheckBC now accepts any URL path for knownissues file
+- Updated knownissues.xml
+
+Version 2.7.0 - 7th April 2009
+--------------------------------
+- Change: OrdinalChecker re-branded as LibraryAnalyser
+- Feature: LibraryAnalyser now analyses dll files also
+- Feature: The tool can now be used with 9.2 and Symbian Foundation codelines
+- Feature: Component speicific forced headers introduced through platform data
+- Change: CDS scripts parses .mmpi and .mmh files also to create platform data
+- Fix: checkbc includes incorrect forced header for 5.0 sdk
+- Updated HeaderAnalyser to version 1.5.0
+- Updated LibraryAnalyser to version 3.3.0
+- Updated knownissues.xml
+
+Version 2.6.1 - 2nd March 2009 
+--------------------------------
+- Fix: HeaderAnalyser parameter length can be more
+- Updated knownissues.xml
+
+Version 2.6.0 - 17th February 2009 
+--------------------------------
+- Feature: Added support to verify source compatibility breaks
+- Feature: Added support for displaying baseline and curent platform versions
+- Feature: Information to end-user if the issue was found previously but the 
+  header has some other unrelated changes
+- Change: Updated include paths for S60 5.1
+- Change: .h;.hrh;.mbg;.rsg;.hpp;.pan are now default file extensions  
+- Change: Harmonized default report filenames with Compatibility Analyser 
+  carbide plugin
+- Change: Default system includes will be included when used with 
+  BASELINE_HEADERS & CURRENT_HEADERS tags
+- Change: In the CDS scripts, .pan and .hpp files included in platform data
+- Fix: Compilation error fixes
+- Fix: In the CDS scripts, exports which dint have a target filename but only
+  path were not included in the platform data
+- Fix: Relative path issues in config file fixed
+- Updated HeaderAnalyser to version 1.4.0
+- Updated OrdinalChecker to version 3.2.0
+- Updated BCFilter to version 1.3.0
+- Updated knownissues.xml
+
+Version 2.5.1 - 8th January 2009 
+--------------------------------
+- Fix: when in "view ok issues" view, "close diff view" does not return to
+  report page main view 
+- Updated knownissues.xml
+
+Version 2.5.0 - 9th December 2008 
+--------------------------------
+- Contains HeaderAnalyser version 1.3.2
+- Contains OrdinalChecker version 3.1.0
+- Contains BCFilter version 1.2.0
+- Updated knownissues.xml
+
+===============================================================================
+
+Copyright (c) 2001-2009 Nokia Corporation and/or its subsidiary(-ies). 
+All rights reserved.
+
+This component and the accompanying materials are made available
+under the terms of the License "Eclipse Public License v1.0"
+which accompanies this distribution, and is available
+at the URL "http://www.eclipse.org/legal/epl-v10.html".

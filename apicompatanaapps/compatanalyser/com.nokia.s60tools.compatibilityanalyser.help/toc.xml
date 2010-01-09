@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Compatibility Analyser" 
+	link_to="../com.nokia.carbide.help.common/carbideHelpTOC.xml#anchorCarbideFeature">
+
+	<!--
+		Define the TOOL NAME as it should appear in the TOC. The tool.htm page
+		is the cover page for the tool help.
+	-->
+	<topic label="Compatibility Analyser" href="html/toc.htm" >
+		
+	   <!--
+		   Following the Eclipse guidelines, the tool help is arranged as Concepts,
+		   References, and Tasks. Each has their own associated XML file to make it
+		   easy to edit each section as well as an overview page.
+	   -->
+   <topic label="Release notes" href="html/release_notes.htm" />
+	
+   <topic label="Getting started" href="html/gettingstarted/GS_index.htm">
+      <anchor id="gettingstarted"/>
+   </topic>
+   
+   <topic label="Concepts" href="html/concepts/concepts.htm">
+      <anchor id="concepts"/>
+   </topic>
+   
+   <topic label="Tasks" href="html/tasks/tasks.htm" >
+      <anchor id="tasks"/>
+   </topic>
+
+   <topic label="References" href="html/references/references.htm">
+      <anchor id="references"/>
+   </topic> 
+   
+   <topic label="Legal" href="html/legal.htm" />
+      
+   </topic>
+</toc>

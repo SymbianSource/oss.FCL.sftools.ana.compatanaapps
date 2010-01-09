@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test Plug-in
+Bundle-SymbolicName: com.nokia.s60tools.compatibilityanalyser.test
+Bundle-Version: 1.0.0
+Bundle-Activator: com.nokia.s60tools.compatibilityanalyser.test.Activator
+Bundle-Vendor: NOKIA
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.junit,
+ com.nokia.s60tools.compatibilityanalyser
+Eclipse-LazyStart: true

@@ -1,0 +1,14 @@
+ 
+/* This file has been generated, DO NOT MODIFY. */
+enum TMifAiscutplugin
+	{
+	EMbmAiscutpluginQgn_prop_ai_shortcut = 16384,
+	EMbmAiscutpluginQgn_prop_ai_shortcut_mask = 16385,
+	EMbmAiscutpluginQgn_menu_url = 16386,
+	EMbmAiscutpluginQgn_menu_url_mask = 16387,
+	EMbmAiscutpluginQgn_menu_mce_sel_mes = 16388,
+	EMbmAiscutpluginQgn_menu_mce_sel_mes_mask = 16389,
+	EMbmAiscutpluginQgn_menu_mce_syncmail = 16390,
+	EMbmAiscutpluginQgn_menu_mce_syncmail_mask = 16391,
+	EMbmAiscutpluginLastElement
+	};

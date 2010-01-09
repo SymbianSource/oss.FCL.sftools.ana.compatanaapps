@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Setting Compatibility Analyser preferences</title>
+<link href="../../book.css" type="text/css" rel="stylesheet"></head>
+<body>
+
+<h2>Setting Compatibility Analyser preferences</h2>
+
+<h5>Before you start</h5>
+<p>In the Compatibility Analyser <b>Preferences</b> dialog, you can do the following:</p>
+<ul>
+	<li>Configure which version of the core component package, <i>BCTools</i>, is used. </li>
+	<li>Configure which <i>knownissues.xml</i> file is used. </li>
+	<li>Configure the URL for predefined baselines.</li>
+</ul>
+
+<p><b>Tip:</b> If you want to use the latest versions, you can retrieve the core 
+components and <i>knownissues.xml</i> files from a Web server. This ensures that
+the results of the BC analysis are always up-to-date and do not show, for
+example, known issues that are already fixed in the platform. </p>
+
+<p>To modify the settings, do the following: </p>
+<ol>
+	<li>Go to <b>Window > Preferences > Carbide Extensions > Compatibility Analyser.</b></li>
+	<li>To specify which core components are used, do any of the following:
+		<ul>
+			<li>To use the default version of BCTools, select the first option. </li>
+			<li>To use a version of BCTools from your local file system, 
+				select the second option and click <b>Browse</b> to locate the tools. </li>
+			<li>To use BCTools from a Web server, type the URL of the server in the field.</li>
+			<li><p>To get the compatible core tools package from a Web server, 
+				the server must contain a metadata file named <i>coretools_metadata</i>. 
+				This file should contain the entries of zip file names with their data version. 
+				Those zip file must be present along with the metadata file. 
+				The format of this file should be as follows:</p>
+				<code>
+					bctools.zip, 2<br>
+					bctools_2_3_0.zip, 3<br>
+					bctools_2_7_1.zip, 4<br>
+					bctools_2_8_2.zip, 5<br>
+					&nbsp;
+				</code>	
+			</li>
+			<li>To use BCTools from any RnD SDK, select it from the installed ones in the list. 
+			<p><b>Tip:</b> Click <b>Refresh</b> to download the latest version.</p> </li>
+		</ul>
+	</li>
+	<li>Specify the URL of the Web server that contains the <i>knownissues.xml</i> files.
+		<p><b>Note:</b> To get the list of known issues files from the Web server,
+		the server must contain a metadata file named <i>knownissues_metadata</i>.
+		This file should contain a list of filenames. The file name at the top can
+		be treated as the latest known issues.</p>
+		<p>The <i>knownissues</i> xml files should be present along with the metadata file. 
+		Format of the metadata file should be as follows:</p>
+		<code>
+			&lt;Knownissues filename1&gt;<br>
+			&lt;Knownissues filename2&gt;<br>
+			&lt;Knownissues filename3&gt;<br>
+			&lt;Knownissues filename4&gt;<br>
+			...<br>
+			&nbsp;
+		</code>
+	</li>
+	<li>(Optional) Specify the URL for the predefined baseline SDKs.
+		<p><b>Note:</b> To use the predefined baselines from the Web server, the server 
+		must contain a metadata file named <i>baselines_metadata_2.0</i>. This file should 
+		contain the URLs to the SDK baselines as follows:</p>
+		<code>
+			&lt;SDK Version&gt;, &lt;Baseline Name&gt;, &lt;URL for the zip file&gt;<br>
+			&lt;SDK Version&gt;, &lt;Baseline Name&gt;, &lt;URL for the zip file&gt;<br>
+			&lt;SDK Version&gt;, &lt;Baseline Name&gt;, &lt;URL for the zip file&gt;<br>
+			&lt;SDK Version&gt;, &lt;Baseline Name&gt;, &lt;URL for the zip file&gt;<br>
+			...<br>
+			&nbsp;
+		</code>
+	</li>
+	<li>To save the changes, click <b>Apply</b>.</li>
+	<li>To exit, click <b>OK</b>.</li>
+</ol>
+
+<div id="footer">Copyright &copy; 2008, 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. 
+License: <a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>.</div> 
+</body>
+</html>

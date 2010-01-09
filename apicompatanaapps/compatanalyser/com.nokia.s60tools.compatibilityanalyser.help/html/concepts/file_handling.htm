@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>File handling in project and folder analysis</title>
+<link href="../../book.css" type="text/css" rel="stylesheet"></head>
+<body>
+
+<h2>File handling in project and folder analysis</h2>
+<p>Compatibility Analyser can be used to analyse a whole project or files under a specific
+sub-folder in a project.</p>
+<p><b>Case 1: Analysing the parent project</b> (behaviour is same as when the tool is 
+launched by right-clicking a project) </p>
+<ul>
+<li><b>Case 1a: The project is an EXE project</b><ul>
+<li>Only the header analysis option will be checked on the first page of the
+Compatibility Analyser wizard. (The <b>Use recursion</b> option will be checked.) 
+</li>
+<li>Header files will be taken from all the USERINCLUDE paths specified in
+all the MMP files. </li>
+<li>Platform headers will be taken from all the SYSTEMINCLUDE paths specific
+in all the MMP files. </li>
+</ul>
+<p><b>Case 1b: The project is a DLL project</b></p>
+<ul>
+<li>Header files will be taken from all the USERINCLUDE paths specified in
+all the MMP files. (The <b>Use recursion</b> option will be checked.) </li>
+<li>Platform headers will be taken from all the SYSTEMINCLUDE paths specified
+in all the MMP files. </li>
+<li>Library files (.dso) will be added only if the corresponding .dso files
+exist in the default build target (such as <i>release/armv5/lib</i>) directory of the SDK that is selected
+as the default configuration. </li>
+</ul></li>
+</ul>
+<p><b>Case 2: Analysing files under the selected folder</b> </p>
+<ul>
+<li>Only the header analysis option will be checked on the first page of the
+Compatibility Analyser wizard. (The <b>Use recursion</b> option will be checked.)
+</li>
+<li>Header files will be taken from the selected folder. </li>
+<li>Platform headers will be taken from all the SYSTEMINCLUDE paths specific
+in all the MMP files of the parent project.</li>
+</ul>
+
+<h5>Related Tasks</h5>
+<ul>
+<li><a href="../tasks/selecting_headerfiles_for_analysis.htm">Selecting header files for analysis</a></li>
+<li><a href="../tasks/selecting_libraryfiles_for_analysis.htm">Selecting library files for analysis</a></li>
+</ul>
+
+<div id="footer">Copyright &copy; 2008, 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. 
+License: <a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>.</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Issues in compatibility reports</title>
+<link href="../../book.css" type="text/css" rel="stylesheet"></head>
+<body>
+
+<h2>Issues in compatibility reports</h2>
+<p>After Compatibility Analyser has run the analysis, the generated reports 
+are listed in the application's view. Some items are reported differently, 
+depending on whether the report is for header or library files.</p>
+<p>On the report, you can also view the OK cases that did not have compatibility problems.</p>
+
+<h3>Reading the report</h3>
+<p>The first part of the report lists general information such
+as the creation date, the baseline and current versions, and the parameters
+used. See the following example:</p>
+<p><img src="images\report_sample.png" alt="Sample compatibility analysis report"></p>
+
+<p>The second part contains the BC breaks that were found. For each header file with problems, the baseline
+header file and the matching current header file are listed. Below them, the
+changes that may affect the BC are listed. Each issue contains: </p>
+<ul>
+<li>a description of the problem, </li>
+<li>the cause, and </li>
+<li>the level of severity: <i>BBC Break</i>, <i>Possible BBC Break</i> or <i>Informative</i>. For example:</li>
+</ul>
+<p><img src="images\breaks_sample.png" alt="Sample of reports BBC Breaks and possible BC Breaks"></p>
+
+<p>For libraries, each issue contains: </p>
+<ul>
+<li>the type of change (added, modified, deleted), </li>
+<li>where it occurred,</li>
+<li>details, and</li>
+<li>the level of severity: <i>BBC Break</i>, <i>Possible BBC Break</i> or <i>Informative</i>. For example: </li>
+</ul>
+<p><img src="images\lib_breaks_sample.png" alt="Sample of library analysis BBC breaks"></p>
+
+<h3>Analysing the findings</h3>
+<ul>
+<li><b>Informative</b> items are reported to help the analyst and do not as
+such constitute a BC break. </li>
+<li>Items marked as <b>BBC Break</b> or <b>Possible BBC Break</b> need to
+be analyzed to determine whether they are breaks or not. Some of the breaks
+come from the platform and some are introduced by the product. </li>
+</ul>
+
+<p>To ease the analysis of the report, make sure that you have the report
+generated for the platform release the product is based on, as well as a list
+of known issues (see <a href="../tasks/knownissues.htm">Configuring the knownissues.xml
+file</a>) in the platform. For each break (or possible break) in the product,
+the report for the platform is then checked. </p>
+<ul>
+<li>If the break is also in the platform, you can check the list of known
+issues and see whether it is a real BC break.</li>
+<li>If the break is not a known break in the platform, it has usually been
+introduced by the product. In this case, consult a binary compatibility expert
+who can carry out further analysis.</li>
+</ul>
+
+<h5>Related references</h5>
+<ul>
+<li><a href="../references/reported_binary_compatibilityissues.htm">Reported Binary Compatibility issues</a></li>
+<li><a href="../references/reported_issues_to_libraryanalysis.htm">Reported library analysis issues</a></li>
+</ul>
+
+<h5>Related tasks</h5>
+<ul>
+<li><a href="../tasks/viewing_the_report.htm">Viewing the reports</a></li>
+</ul>
+
+<div id="footer">Copyright &copy; 2008, 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. 
+License: <a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>.</div>
+</body>
+</html>
+

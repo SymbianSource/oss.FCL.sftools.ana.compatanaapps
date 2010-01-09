@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Reported Binary Compatibility issues</title>
+<link href="../../book.css" type="text/css" rel="stylesheet"></head>
+<body>
+
+<h2>Reported Binary Compatibility issues</h2>
+<p>The following table lists the issues and severity evaluations in the BC report.</p>
+<p>Also see <a href="reported_binary_compatibilityissues.htm#function">Issues for exported
+non-virtual or inline functions</a> below. </p>
+
+<table border="1" cellspacing="1" cellpadding="2">
+<colgroup>
+<col width="150*">
+<col width="64*">
+<col width="160*"></colgroup>
+<thead>
+<tr bgcolor="#ACD79B">
+<td><p><b>Issue</b></p></td>
+<td><p><b>Severity</b></p></td>
+<td><p><b>Comment</b></p></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>Removing an accessible class.</p></td>
+<td><p>BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Class has an incomplete type.</p></td>
+<td><p>Informative</p></td>
+<td><p>This may be the result of, for example, changing the class declaration
+to a forward declaration. This issue is raised because incomplete classes
+cannot be analyzed properly. </p></td>
+</tr>
+<tr>
+<td><p>Access to the class has been changed to more restrictive.</p></td>
+<td><p>Informative</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Accessible class is using a virtual inheritance.</p></td>
+<td><p>Informative</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Size of an accessible class is changed. </p></td>
+<td><p>BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Size of the base class of an accessible class has changed.</p></td>
+<td><p>BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Alignment of an accessible class is changed.</p></td>
+<td><p>BBC Break</p></td>
+<td><p>Alignment is calculated by the compiler, and it represents the amount
+of data that is padded to the data structure in order to ensure its proper
+alignment in the computer memory. </p></td>
+</tr>
+<tr>
+<td><p>Virtuality of the inheritance is changed.</p></td>
+<td><p>Possible BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Base class of an accessible class is removed.</p></td>
+<td><p>Possible BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Base class is added to the accessible class.</p></td>
+<td><p>Possible BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Order of the base classes of an accessible class is changed.</p></td>
+<td><p>Possible BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Virtual table of the base class of an accessible class is changed.
+</p></td>
+<td><p>BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Add a virtual function to an accessible class.</p></td>
+<td><p>BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Remove a virtual function from an accessible class.</p></td>
+<td><p>BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Change the order of the virtual functions in an accessible class.</p></td>
+<td><p>BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Type of an accessible constant is changed.</p></td>
+<td><p>Possible BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Initial value of an accessible constant is changed.</p></td>
+<td><p>Possible BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Accessibility of a constant is changed to more restrictive.</p></td>
+<td><p>Informative</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Remove an accessible typedef.</p></td>
+<td><p>Possible BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Change the type of an accessible typedef.</p></td>
+<td><p>Possible BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Access of a typedef is changed to more restrictive.</p></td>
+<td><p>Informative</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Remove an accessible enumeration.</p></td>
+<td><p>Possible BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Remove an enumeration value.</p></td>
+<td><p>Possible BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Add a value to the middle of an accessible enumeration.</p></td>
+<td><p>Possible BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Changing the alignment of an accessible enumeration.</p></td>
+<td><p>BBC Break / Possible BBC Break</p></td>
+<td><p>If the enumeration is accessible publicly or via derivation, the change
+is reported with severity BBC Break. If the enumeration is accessible via
+a public or protected inline function, it is reported with severity Possible
+BBC Break. Alignment is calculated by the compiler.</p></td>
+</tr>
+<tr>
+<td><p>Size of an accessible enumeration changed.</p></td>
+<td><p>BBC Break / Possible BBC Break</p></td>
+<td><p>If the enumeration is accessible publicly or via derivation, the change
+is reported with severity BBC Break. If the enumeration is accessible via
+a public or protected inline function, it is reported with severity Possible
+BBC Break.</p></td>
+</tr>
+<tr>
+<td><p>Change the access of an enumeration to more restrictive.</p></td>
+<td><p>Informative</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Order or initial values of an accessible enumeration changed.</p></td>
+<td><p>Possible BBC Break</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Access of a member variable is changed to more restrictive.</p></td>
+<td><p>Informative</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Removing a member variable.</p></td>
+<td><p>BBC Break / Possible BBC Break / Informative</p></td>
+<td><p>Removing a publicly available member variable is reported with severity
+BBC Break. Removing the private or protected member variable exposed by public
+or protected inline function is reported with severity Possible BBC Break.
+Removing a private variable from a class not containing public or protected
+inline functions is reported as Informative.</p></td>
+</tr>
+<tr>
+<td><p>Adding a member variable to a class.</p></td>
+<td><p>Informative</p></td>
+<td><p>-</p></td>
+</tr>
+<tr>
+<td><p>Changing the offset of a member variable.</p></td>
+<td><p>BBC Break / Possible BBC Break</p></td>
+<td><p>If publicly available, severity BBC Break, or if exposed by public
+or protected inline function, severity Possible BBC Break.</p></td>
+</tr>
+<tr>
+<td><p>Changing the type of a member variable.</p></td>
+<td><p>BBC Break / Possible BBC Break</p></td>
+<td><p>If publicly available, severity BBC Break, or if exposed by public
+or protected inline function, severity Possible BBC Break.</p></td>
+</tr>
+<tr>
+<td><p>Changing the size of a member variable.</p></td>
+<td><p>BBC Break / Possible BBC Break</p></td>
+<td><p>If publicly available, severity BBC Break, or if exposed by public
+or protected inline function, severity Possible BBC Break.</p></td>
+</tr>
+</tbody>
+</table>
+<p>* Get in touch with your architect/lead on how to proceed - if you encounter any BC break.</p>
+
+<h3><a name="function"></a>Issues for exported non-virtual or inline functions</h3>
+<p>There is more variation in the rules when analysing exported non-virtual or inline 
+functions, as listed below.</p>
+<table border="1" cellspacing="1" cellpadding="2">
+<colgroup>
+<col width="150*">
+<col span="1" width="64*">
+<col width="160*"></colgroup>
+<tbody>
+<tr>
+<td><p><b>Issue</b></p></td>
+<td><p><b>Type</b></p></td>
+<td><p><b>Access and severity</b></p></td>
+</tr>
+<tr>
+<td><p>Remove a function or change its signature.</p><p>Note: Function signature
+can be changed in the following ways:  </p><ul>
+<li>Return value can be changed from const to non-const. </li>
+<li>Parameter can be changed from non-const to const. </li>
+<li>Function can be changed from non-const to const.</li>
+</ul></td>
+<td><p>Exported</p></td>
+<td><ul>
+<li><b>Public:</b> BBC Break</li>
+<li><b>Protected:</b> If the class is derivable, this is reported as BBC Break.
+If the class is not derivable but has public inline functions, this is reported
+as Possible BBC Break. Otherwise not reported.</li>
+<li><b>Private:</b> If the class contains any public inline functions or it
+contains protected inline functions and is derivable, this is reported as
+Possible BBC Break. Otherwise not reported.</li>
+</ul></td>
+</tr>
+<tr>
+<td height="20"><p>-</p></td>
+<td height="20"><p>Inline</p></td>
+<td height="20"><ul>
+<li><b>Public:</b> Informative</li>
+<li><b>Protected:</b> Informative</li>
+<li><b>Private:</b> If the class contains any public inline functions or it
+contains protected inline functions and is derivable, this is reported as
+Informative. Otherwise not reported.</li>
+</ul></td>
+</tr>
+<tr>
+<td><p>Add function. </p></td>
+<td><p>Exported</p></td>
+<td><ul>
+<li><b>Any:</b> Not reported.</li>
+</ul></td>
+</tr>
+<tr>
+<td><p>-</p></td>
+<td><p>Inline</p></td>
+<td><ul>
+<li><b>Any:</b> Not reported.</li>
+</ul></td>
+</tr>
+<tr>
+<td height="27"><p>Change the order. </p></td>
+<td height="27"><p>Exported</p></td>
+<td height="27"><ul>
+<li><b>Any:</b> Not reported.</li>
+</ul></td>
+</tr>
+<tr>
+<td><p>&mdash;</p></td>
+<td><p>Inline</p></td>
+<td><ul>
+<li><b>Any:</b> Not reported.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+<div id="footer">Copyright &copy; 2008, 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. 
+License: <a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>.</div> 
+</body>
+</html>

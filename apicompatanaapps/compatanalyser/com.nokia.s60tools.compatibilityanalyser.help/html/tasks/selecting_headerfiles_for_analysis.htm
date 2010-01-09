@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+  <title>Selecting header files for analysis</title>
+  <link href="../../book.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<h2>Selecting header files for analysis</h2>
+
+<h5>Before you start</h5>
+
+<p>Before you can add header files for analysis, the type of analysis, baseline
+profile and the current SDK must be selected first. For instructions, see <a
+href="select_analysis_type.htm">Selecting the analysis type, baseline profile
+and current SDK</a>.</p>
+
+<p><b>Note:</b> Header files are handled differently in EXE and DLL projects.
+See <a href="../concepts/file_handling.htm">File handling in project and folder
+analysis</a> for more information. </p>
+
+<p>To select header files, follow these steps: </p>
+<ol>
+  <li>To specify the root directory, you can either: 
+    <ul>
+      <li>Use the <i>\epoc32\include</i> directory of the previously selected
+        SDK. </li>
+      <li>Select the second option and click <b>Add directory...</b> to choose
+        specific directories. </li>
+    </ul>
+  </li>
+  <li>To specify which headers are analysed, you can either: 
+    <ul>
+      <li>Analyse all the files that are available in the selected SDK. To
+        specify which file types are analysed, you can either:
+		<ul>
+          <li>Analyse all supported file types (.h, .hrh, .rsg, .mbg, .hpp, and
+            .pan).</li>
+          <li>Select the second option and choose specific file types for
+            analysis. </li>
+        </ul>
+      </li>
+      <li>Select the second option and click <b>Add Files</b> to choose the
+        headers from the selected directory in a separate dialog. 
+        <p><b>Tip:</b> If you know that a file has different names in the
+        current SDK and baseline SDK, click <b>Set baseline filename</b>. In
+        the <b>Set Baseline file</b> dialog,
+        enter the new filename and click <b>OK</b>.</p></li>
+        </ul></li>
+    <li>(Optional) To show the files also under sub-directories when you click <b>
+        Add Files</b>, select the <b>Use Recursion</b> check box. </li>
+    <li><a name="platform_header"></a>(Optional) Click <b>Advanced options...</b> to provide advanced settings.
+		<ul>
+			<li>For system include paths of this current other than defaults:
+				<ul>
+					<li><p>The following table lists the default system include paths 
+						supplied by the tool, based on SDK version:</p>
+						<table width="404" border="0" cellspacing="0" cellpadding="0">
+						<colgroup>
+							<col width="69*">
+							<col width="126*">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td><b>SDK Version</b></td>
+								<td><b>Default System Includes</b></td>
+							</tr>
+							<tr>
+								<td><p>Symbian Version 1 and Symbian Version 2</p></td>
+								<td><i>epoc32\include</i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\ecom</i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\oem</i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\libc</i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\middleware</i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\domain\middleware</i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\osextensions</i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\domain\osextensions</i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\applications</i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\domain\applications</i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\domain\middleware\loc </i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\domain\osextensions\loc </i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\domain\applications\loc </i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\domain\middleware\loc\sc </i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\domain\osextensions\loc\sc </i></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><i>epoc32\include\domain\applications\loc\sc </i></td>
+							</tr>
+						</tbody>
+						</table>
+						<p><b>Disclaimer</b>: The default include paths can be different 
+							if non-default core components are in use.</p>
+					</li>
+					<li>Click <b>Add Includes</b> to browse for more include paths.</li>
+				</ul>
+			</li>
+			<li>To provide additional forced headers
+				<ul>
+					<li>Click <b>Add</b> to choose the forced header files from the provided system include paths.</li>
+				</ul>
+			</li>
+			<li>To provide additional information about compile-time dependencies, 
+				select the Use dependency data option.
+				<p>It is recommended to select this option to ensure that all headers 
+				are compiled successfully, with the help of platform datafiles. 
+				The files are included in the tool's delivery and there are separate 
+				files for each Symbian platform version.</p>
+			</li>
+		</ul>
+	</li>
+	<li>Click <b>Next</b> to either:
+		<ul>
+			<li><a href="selecting_libraryfiles_for_analysis.htm">Select library files</a>, 
+				if you chose to analyse them on the first wizard page, or:
+			</li>
+			<li><a href="configuring_report_options.htm">Configure report file options</a>.
+			</li>
+        </ul>
+	</li>
+</ol>
+
+<h5>Related concepts</h5>
+<ul>
+	<li><a href="../concepts/header_and_library.htm">Header and library files in preserving compatibility</a></li>
+</ul>
+		
+<div id="footer">Copyright &copy; 2008, 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. 
+License: <a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>.</div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Tasks" link_to="toc.xml#tasks"> 
+	
+	<topic label="Selecting the analysis type, baseline profile and current SDK" href="html/tasks/select_analysis_type.htm" /> 
+	<topic label="Creating or editing the baseline profile" href="html/tasks/configuring_baselineprofile.htm" />
+	<topic label="Selecting header files for analysis" href="html/tasks/selecting_headerfiles_for_analysis.htm" />
+	<topic label="Selecting library files for analysis" href="html/tasks/selecting_libraryfiles_for_analysis.htm" />
+	<!-- COMBINED <topic label="Create/Edit the baseline profile" href="html/tasks/create_edit_baselineprofile.htm" /> --> 
+	<topic label="Configuring the report file options" href="html/tasks/configuring_report_options.htm" />
+	<topic label="Configuring the knownissues.xml file" href="html/tasks/knownissues.htm" />
+	<topic label="Viewing the reports" href="html/tasks/viewing_the_report.htm" />
+	<topic label="Filtering existing reports" href="html/tasks/filtering_existing_reports.htm" />
+	<topic label="Saving the analysis into a configuration file" href="html/tasks/saving_the_configuration_to_file.htm" />
+	<topic label="Setting Compatibility Analyser preferences" href="html/tasks/setting_preferences.htm" />
+	
+</toc>

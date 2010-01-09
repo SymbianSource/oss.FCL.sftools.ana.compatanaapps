@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Overview to Binary Compatibility</title>
+<link href="../../book.css" type="text/css" rel="stylesheet"></head>
+<body>
+
+<h2>Overview to Binary Compatibility</h2>
+<p>It is important for users that the software they buy and use continues to 
+run on new releases of Symbian OS, and that it is transferable to new 
+devices that contain the latest releases of the operating system. 
+Ensuring that a new software release does not break existing software is 
+known as maintaining <b>Binary Compatibility (BC)</b>.</p>
+<p>Binary Compatibility means that all Symbian platform published interfaces
+must be supported in the upcoming Symbian platform versions as well, in such a
+way, that there is no need to rebuild the already existing executables, which
+were developed and built against some previous Symbian platform version either
+by 3rd party application developers or other device manufacturers.</p>
+<p>Preserving BC is a concern for: </p>
+<ul>
+<li>system developers responsible for the evolution of the operating system,</li>
+<li>any developer whose software provides services to client software, </li>
+<li>developers whose software uses such services and who should understand
+a problem that they may encounter. </li>
+</ul>
+
+<h3>How to maintain BC?</h3>
+<p>Maintaining BC is a central aspect in common Symbian coding guidelines. 
+BC can be broken if there is a mismatch between the part of the interface 
+the executable was built against and the part of the interface the executable 
+is running against, or the format of data files has changed. For general 
+guidelines, see the Symbian Developer <i>Coding Standards
+</i> document.</p>
+<p>For more information, see <a href="header_and_library.htm">
+Header and library files in preserving compatibility</a>.</p>
+
+<h5>Related references</h5>
+<ul>
+<li><a href="../references/reported_binary_compatibilityissues.htm">Reported Binary Compatibility issues</a></li>
+<li><a href="../references/reported_issues_to_libraryanalysis.htm">Reported library analysis issues</a></li>
+</ul>
+
+<div id="footer">Copyright &copy; 2008, 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. 
+License: <a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>.</div>
+</body>
+</html>

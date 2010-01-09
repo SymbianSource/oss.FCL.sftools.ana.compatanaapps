@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Saving the analysis into a configuration file</title>
+<link href="../../book.css" type="text/css" rel="stylesheet"></head>
+<body>
+
+<h2>Saving the analysis into a configuration file</h2>
+<h5>Before you start</h5>
+<p>When Compatibility Analyser analyses a project, you can save
+the settings into a configuration file for further use. The file contains
+the same values that were specified on the wizard (for example, baseline and
+current SDKs, toolchains, and the knownissues file). Files with this extension
+are associated with Compatibility Analyser by default and be used to launch
+the analysis.</p>
+<p><b>Tip:</b> Create a configuration file for, for example,
+different projects or releases you plan to test.</p>
+<p>To save the configuration: </p>
+<ol>
+<li>On the <b>Configuration Information</b> wizard page, select the check box.</li>
+<li>Click <b>Browse</b> to locate the project to which the file belongs. Default
+is the currently active project. </li>
+<li>Enter a filename for the configuration. </li>
+<li>Click <b>Finish</b> to start the analysis. See <a href="viewing_the_report.htm">
+Viewing the reports</a> for the next steps. </li>
+</ol>
+<p>The <i>.comptanalyser</i> file is created and added to the specified
+project, as shown below:</p>
+<p><img src="images\config_file.png" alt="Sample of the configuration file in a project"></p>
+
+<h3>Running an analysis using a saved configuration</h3>
+<p>To launch a saved configuration on the Project Explorer view, do either of the following: </p>
+<ul>
+<li>Right-click the <i>.comptanalyser</i> file of your choice and select <b>
+Open With... > Run static analysis with Compatibility Analyser. </b></li>
+<li>Double-click the <i>.comptanalyser</i> file of your choice. </li>
+</ul>
+<p><b>Note:</b> Analysis starts immediately without the wizard and the
+previous result files are overwritten. </p>
+
+<h3>Modifying a saved configuration</h3>
+<p>To modify a saved configuration (for example, to change the location
+of the result file or analysed components), do the following: </p>
+<ol>
+	<li>Select the <i>.comptanalyser</i> file you want to modify and select 
+	<b>File > Open With... > Edit Compatibility Analyser Configuration File...</b>
+	<p>The Compatibility Analyser wizard is launched.</p></li>
+	<li>On the wizard pages, modify the values as needed. </li>
+	<li>To save the changes, click <b>Finish</b>. </li>
+</ol>
+<p><b>Note:</b> Modification of configuration is encouraged only in the above specified way.
+Manual editing is not encouraged. </p>
+
+<div id="footer">Copyright &copy; 2008, 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. 
+License: <a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>.</div>
+</body>
+</html>

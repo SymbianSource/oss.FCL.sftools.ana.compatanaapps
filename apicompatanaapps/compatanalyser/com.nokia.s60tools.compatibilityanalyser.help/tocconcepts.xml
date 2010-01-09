@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Concepts" link_to="toc.xml#concepts" > 
+	<topic label="Overview to Binary Compatibility" href="html/concepts/binary_compatibility.htm" />
+	<topic label="Software development kit (SDK)" href="html/concepts/software_development_kit.htm" />	
+	<topic label="Header and library files in preserving compatibility" href="html/concepts/header_and_library.htm" />
+	<topic label="File handling in project and folder analysis" href="html/concepts/file_handling.htm" />
+	<topic label="Issues in compatibility reports" href="html/concepts/analysis_reports.htm" />
+</toc>

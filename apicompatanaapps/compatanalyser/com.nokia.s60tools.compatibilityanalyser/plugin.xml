@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         id="product"
+         name="Compatibility Analyser"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            description="Tool used to check static compatibility"
+            name="Compatibility Analyser Tool"/>
+   </extension>
+   <extension
+         id="com.nokia.s60tools.compatibilityanalyser.actionset"
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            description="Tool to run Compatibility Analysis"
+            id="com.nokia.s60tools.compatibilityanalyser.actionSet"
+            label="Compatibility Analyser"
+            visible="true">
+         <menu
+               id="com.nokia.carbide.cpp.ui.CarbideMenu"
+               label="&amp;Carbide"
+               path="additions">
+            <groupMarker name="CarbideExtensions"/>
+         </menu>
+         <action   
+               class="com.nokia.s60tools.compatibilityanalyser.ui.actions.ToolbarShortcutAction"
+               icon="icons/compatibility_analyser_main_16.png"
+               id="com.nokia.s60tools.compatibilityanalyser.ui.actions.ToolbarShortcutAction"
+               label="Compatibility Analyser"
+               menubarPath="com.nokia.carbide.cpp.ui.CarbideMenu/CarbideExtensions"
+               style="push"
+               tooltip="Compatibility Analysis Tool"/>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="com.nokia.s60tools"
+            name="Carbide Extensions"/>
+      <view
+            category="com.nokia.s60tools"
+            class="com.nokia.s60tools.compatibilityanalyser.ui.views.MainView"
+            icon="icons/compatibility_analyser_main_16.png"
+            id="com.nokia.s60tools.compatibilityanalyser.ui.views.MainView"
+            name="CompatibilityAnalyser"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="com.nokia.carbide.cpp.preferences.ExtensionsPreferencesPage"
+            class="com.nokia.s60tools.compatibilityanalyser.ui.wizards.CompatibilityAnalyserPreferences"
+            id="com.nokia.s60tools.compatibilityanalyser.page2"
+            name="Compatibility Analyser"/>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer class="com.nokia.s60tools.compatibilityanalyser.ui.wizards.CompatibilityAnalyserPreferencesInitializer"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="com.nokia.s60tools.compatibilityanalyser.project"
+            objectClass="org.eclipse.core.resources.IProject">
+         <menu
+               id="com.nokia.s60tools.compatibilityanalyser.compMenu"
+               label="Compatibility Analyser"
+               path="additions"/>
+         <action
+               class="com.nokia.s60tools.compatibilityanalyser.ui.actions.ProjectViewPopupAction"
+               enablesFor="1"
+               icon="icons/compatibility_analyser_run_16.png"
+               id="com.nokia.s60tools.compatibilityanalyser.action1"
+               label="Run static analysis for this project..."
+               menubarPath="com.nokia.s60tools.compatibilityanalyser.compMenu/additions"/>
+      </objectContribution>
+      <objectContribution
+            adaptable="true"
+            id="com.nokia.s60tools.compatibilityanalyser.objectContribution2"
+            nameFilter="*.mmp"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               id="com.nokia.s60tools.compatibilityanalyser.mmpPopup"
+               label="Compatibility Analyser"
+               path="additions"/>
+         <action
+               class="com.nokia.s60tools.compatibilityanalyser.ui.actions.ProjectViewPopupAction"
+               icon="icons/compatibility_analyser_run_16.png"
+               id="com.nokia.s60tools.compatibilityanalyser.action3"
+               label="Run static analysis for this mmp..."
+               menubarPath="com.nokia.s60tools.compatibilityanalyser.mmpPopup/additions"/>
+      </objectContribution>
+      <objectContribution
+            adaptable="true"
+            id="com.nokia.s60tools.compatibilityanalyser.folder"
+            objectClass="org.eclipse.core.resources.IFolder">
+         <menu
+               id="com.nokia.s60tools.compatibilityanalyser.folderMenu"
+               label="Compatibility Analyser"
+               path="additions"/>
+         <action
+               class="com.nokia.s60tools.compatibilityanalyser.ui.actions.ProjectViewPopupAction"
+               enablesFor="1"
+               icon="icons/compatibility_analyser_run_16.png"
+               id="com.nokia.s60tools.compatibilityanalyser.folderAction1"
+               label="Run static analysis for this project..."
+               menubarPath="com.nokia.s60tools.compatibilityanalyser.folderMenu/additions"/>
+         <action
+               class="com.nokia.s60tools.compatibilityanalyser.ui.actions.AnalyseDirOnlyAction"
+               icon="icons/compatibility_analyser_run_16.png"
+               id="com.nokia.s60tools.compatibilityanalyser.folderAction2"
+               label="Run static analysis for this directory in project..."
+               menubarPath="com.nokia.s60tools.compatibilityanalyser.folderMenu/additions"/>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            default="true"
+            extensions="comptanalyser"
+            icon="icons/compatibility_analyser_main_16.png"
+            id="com.nokia.s60tools.compatibilityanalyser.ui.editors.ComptAnalyserLauncher"
+            launcher="com.nokia.s60tools.compatibilityanalyser.ui.editors.ComptAnalyserLauncher"
+            name="Run static analysis with Compatibility Analyser"/>
+      <editor
+            default="false"
+            extensions="comptanalyser"
+            icon="icons/compatibility_analyser_main_16.png"
+            id="com.nokia.s60tools.compatibilityanalyser.editor2"
+            launcher="com.nokia.s60tools.compatibilityanalyser.ui.editors.ComptAnalyserEditLauncher"
+            name="Edit Compatibility Analyser Configuration file..."/>
+   </extension>
+   
+</plugin>

@@ -1,0 +1,160 @@
+===============================================================================
+
+RELEASE NOTES - HEADERANALYSER v1.6.0
+RELEASED 19th June 2009
+
+SUPPORTS S60 3.0+
+
+===============================================================================
+
+Product Description:
+====================
+The purpose of the HeaderAnalyser tool is to compare a set of modified header
+files to those in a baseline and report any changes that may affect binary
+compatibility. HeaderAnalyser has a command line interface and can read its
+parameters from a configuration file. The tool produces an XML file which lists
+all such changes. Usually the baseline is an SDK and the modified header files
+are the header files found in the product's epoc32\include directory and its
+subdirectories.
+
+Main Features:
+==============
+- Read different versions of header files and check binary compatibility
+  issues between them
+- Compare two header files
+- Compare two directories
+- Compare two file sets
+- Compare renamed files
+- Generate an XML report file
+
+===============================================================================
+
+What's New in v1.6.0
+====================
+- Feature: Added support to verify .rh files
+- Feature: Added support to verify QT headers
+- Change: Analysis time reduced by 25%-30%, using multiple threads
+- Fix: Program terminated unexpectedly when checking for include guard
+
+===============================================================================
+
+Installation Notes:
+===================
+HeaderAnalyser is part of Compatibility Analyser tool suite. Please refer to
+Compatibility Analyser documentation for details.
+
+===============================================================================
+
+System Requirements:
+====================
+Basic Requirements:
+- Windows 2000 or XP with 256MB RAM
+
+===============================================================================
+
+Compatibility Issues:
+=====================
+N/A
+
+===============================================================================
+
+Known Issues:
+=============
+- HeaderAnalyser is used for compliling header files, not actual sources of
+  components. Therefore compilation errors may happen easily due to missing
+  includes or wrong system include paths. Please refer to Compatibility
+  Analyser documentation for how to overcome this problem.
+  
+===============================================================================
+
+Version History:
+================
+
+Version 1.5.0 - 7th April 2009
+--------------------------------
+- Feature: Component speicific forced headers introduced through platform data
+- Feature: HeaderAlanyser now works in Linux environment
+- Fix: Bug in multiple input directories to HeaderAnalyser
+
+Version 1.4.0 - 17th February 2009
+--------------------------------
+- Feature: Added support to verify source compatibility breaks
+- Feature: Added support to display compilation error information in report file
+- Change: .h;.hrh;.mbg;.rsg;.hpp;.pan are now default file extensions  
+- Fix: Compilation error fixes
+- Fix: HeaderAnalyser produces empty <filename> tag
+
+Version 1.3.2 - 9th December 2008 
+--------------------------------
+- Fix: Error was shown when a path contained spaces
+- Fix: MergeFiles gives current header file from wrong path
+- Fix: Macro analysis did not work correctly if the macro contained ( or )
+
+Version 1.3.1 - 14th November 2008 
+--------------------------------
+- Fix Removed: Error was shown when a path contained spaces
+
+Version 1.3.0 - 28th October 2008
+--------------------------------
+- Feature: Do additional compilation rounds if the compilation fails for
+  - header file with forced header and only system include from platform data
+  - header file without forced header and platform data
+- Fix: Forced header files should not be included if not defined via parameters
+- Fix: Error was shown when a path contained spaces
+- Fix: Macroanalyser did not work correctly if the line contained extra spaces
+- Fix: Program terminated unexpectedly if the macro definition contained tabs
+
+Version 1.2.6 - 29th August 2008
+--------------------------------
+- Fix: Forced headers were not included to macro analysis
+
+Version 1.2.5 - 20th August 2008
+--------------------------------
+- Feature: Multiple forced header files can now be specified instead of just
+  one
+- Fix: File name now appears in non-filtered report files correctly
+- Fix: Recursive option did not work with multiple header directories
+- Fix: Macro analysis did not work correctly in case of multiple files
+  contained the same macro
+  
+Version 1.2.4 - 8th July 2008
+-----------------------------
+- Feature: Multiple directories can be defined for analysis (baselinedir and
+  currentdir parameters)
+- Change: .h;.hrh;.mbg;.rsg are now default file extensions   
+- Fix: When set parameter was not defined, nothing happened 
+- Fix: All system include paths were not included to analysis when getting
+  dependency information from platfrom data files
+- Fix: Replace option was not case insensitive
+- Fix: One character long version strings were not accepted as input
+
+Version 1.2.3 - 29th May 2008
+-----------------------------
+- Feature: Display progress information
+- Change: If header defined by "set" parameter is not found, a warning is
+  displayed instead of exiting
+- Fix: Strip off whitespaces and tabs from "set" parameter
+
+Version 1.2.2 - 15th May 2008
+-----------------------------
+- Fix: "File contains nothing to analyse" warning should not be generated for
+  files which contains macros only
+  
+Version 1.2.1 - 14th February 2008
+----------------------------------
+- Fix: Missing include guards in header files could cause compilation errors
+
+Version 1.2.0 - 8th February 2008
+---------------------------------
+- Feature: Added support for external platform data which specifies certain
+  compile-time dependencies in S60/Symbian component.
+
+===============================================================================
+
+Copyright (c) 2001-2009 Nokia Corporation and/or its subsidiary(-ies). 
+All rights reserved.
+
+This component and the accompanying materials are made available
+under the terms of the License "Symbian Foundation License v1.0"
+which accompanies this distribution, and is available
+at the URL "http://www.symbianfoundation.org/legal/sfl-v10.html".

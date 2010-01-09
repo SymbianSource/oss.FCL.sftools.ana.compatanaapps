@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+  <title>Creating or editing the baseline profile</title>
+  <link href="../../book.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<h2>Creating or editing the baseline profile</h2>
+
+<p>A baseline profile contains information related to the baseline SDK, which
+is the point of comparison against the current SDK. Baseline defines the root
+directory of headers, system include paths, and the root directory of
+libraries.</p>
+
+<p>To create a baseline profile in the <b>Baseline Editor</b> dialog, do the
+following: </p>
+<ol>
+  <li>Type in a name for your profile. </li>
+  <li>Select the SDK name and Symbian SDK version number to be used.</li>
+  <li>To fill the data in the <b>Headers</b> and
+    <b>Library</b> tab from a baseline project, select the option
+    <b>Use includes and forced headers from the selected bld.inf</b> and browse
+    for the <i>bld.inf</i> file of your baseline project. This option fills in
+    the required paths automatically.</li>
+  <li>To provide the paths manually, choose the <b>Headers</b> Tab
+    and follow the below steps: 
+    <ul>
+      <li>For headers of this baseline: 
+        <ul>
+          <li>Use the <em>\epoc32\include</em> directory of the selected
+          SDK.</li>
+          <li>Select the second option and click <b>Add
+            directory&hellip;</b> to specify other directories.</li>
+        </ul>
+      </li>
+      <li>(Optional) For system include paths of this baseline other than
+        defaults: 
+        <ul>
+          <li>Click <b>Add Includes</b> to browse for more include
+            paths.</li>
+        </ul>
+      </li>
+      <li>(Optional) For forced headers of this baseline: 
+        <ul>
+          <li>Click <b>Add</b> to choose the forced headers and files
+            from a different directory.</li>
+        </ul>
+      </li>
+    </ul>
+<p>Optional settings can be shown or hidden using the <b>Show/Hide</b> button.</p>
+  </li>
+  <li>To choose the build configuration (for example, armv5 and armv6), choose
+    the <b>Libraries Tab</b> and you can do any of the following: 
+    <ul>
+      <li>Select the <b>Analyse files from default build target</b> option (default).
+      </li>
+      <li>Select the <b>Analyse files from selected target build directory</b> and choose
+       a target. </li>
+      <li>Select the third option and click <b>Browse</b> to browse for
+        director(y/ies) of libraries and DLLs.</li>
+    </ul>
+  </li>
+  <li>To create the profile, click <b>Save &amp; OK</b>. </li>
+</ol>
+
+<p>The predefined profiles found in the given web server path will be listed in the <b>Profile Name</b> drop down list. Downloading will be started when a profile is selected. The predefined profiles cannot be edited.</p>
+
+<h5>Related tasks</h5>
+<ul>
+  <li><a href="select_analysis_type.htm">Selecting the analysis type, baseline
+    profile and current SDK</a></li>
+  <li><a href="setting_preferences.htm">Setting Compatibility Analyser
+    preferences </a> </li>
+</ul>
+
+<div id="footer">Copyright &copy; 2008, 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. 
+License: <a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>.</div>
+</body>
+</html>

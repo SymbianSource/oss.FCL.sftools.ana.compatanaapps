@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.contexts"?>
+<contexts>
+
+<context id="COMP_MAIN_VIEW">
+ <description>Compatibility Analyser's main view</description>	   
+	<topic label="Filtering existing reports" href="html/tasks/filtering_existing_reports.htm" />
+	<topic label="Viewing the reports" href="html/tasks/viewing_the_report.htm" />
+	<topic label="Reported binary compatibility issues" href="html/references/reported_binary_compatibilityissues.htm" />
+	<topic label="Reported library analysis issues" href="html/references/reported_issues_to_libraryanalysis.htm" />
+	<topic label="Toolbar" href="html/references/toolbar.htm" />
+</context>	  
+
+<context id="WIZARD_HEADERS_PAGE">
+ <description>Header analysis</description>	   
+ <topic label="Selecting header files for analysis" href="html/tasks/selecting_headerfiles_for_analysis.htm"/>
+</context>    
+     		     
+<context id="WIZARD_LIBRARY_PAGE">
+ <description>Library analysis</description>	   
+ <topic label="Selecting library files for analysis" href="html/tasks/selecting_libraryfiles_for_analysis.htm"/>
+</context>    
+     		     
+<context id="WIZARD_REPORT_FILTER">
+ <description>Filter existing reports</description>	   
+ <topic label="Filtering existing reports" href="html/tasks/filtering_existing_reports.htm"/>
+</context>    
+     		     
+<context id="BASELINE_EDITOR">
+ <description>Baseline editor</description>	   
+ <topic label="Creating or editing the baseline profile" href="html/tasks/configuring_baselineprofile.htm"/>
+</context>    
+     		     
+<context id="KNOWNISSUES_DIALOG">
+ <description>Knownissues dialog</description>	   
+ <topic label="Configuring the knownissues.xml file" href="html/tasks/knownissues.htm"/>
+</context>    
+    		     
+<context id="PREFERENCES">
+ <description>Compatibility Analyser Preferences</description>	   
+ <topic label="Setting Compatibility Analyser preferences" href="html/tasks/setting_preferences.htm"/>
+</context> 
+     		     
+<context id="WIZARD_PRODUCT_SDK">
+ <description>Current release SDK</description>	   
+ <topic label="Selecting the analysis type, baseline profile and current SDK" href="html/tasks/select_analysis_type.htm"/>
+</context>  
+
+<context id="WIZARD_INCLUDES_PAGE">
+ <description>Platform headers</description>	   
+ <topic label="Selecting platform headers" href="html/tasks/selecting_headerfiles_for_analysis.htm#platform_header"/>
+</context>
+
+<!-- is this needed anymore? --> 
+<context id="WIZARD_PROFILE_PAGE">
+ <description>Baseline profile selection</description>	   
+ <topic label="Configuring the baseline profile" href="html/tasks/configuring_baselineprofile.htm"/>
+</context>
+
+<context id="WIZARD_REPORT_PAGE">
+ <description>Filter options</description>	   
+ <topic label="Configuring the report options" href="html/tasks/configuring_report_options.htm"/>
+</context>         
+
+<context id="WIZARD_CONFIGURATION_INFO">
+ <description>Create a configuration file of analysis</description>	   
+ <topic label="Saving the analysis into a configuration file" href="html/tasks/saving_the_configuration_to_file.htm"/>
+</context>    
+</contexts>

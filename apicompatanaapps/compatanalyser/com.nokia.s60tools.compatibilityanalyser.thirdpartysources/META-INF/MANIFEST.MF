@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Thirdpartysources
+Bundle-SymbolicName: com.nokia.s60tools.compatibilityanalyser.thirdpartysources
+Bundle-Version: 1.1.0
+Bundle-Vendor: Nokia
+Bundle-Localization: plugin

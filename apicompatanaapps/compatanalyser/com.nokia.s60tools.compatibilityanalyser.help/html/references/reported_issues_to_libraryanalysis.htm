@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Reported library analysis issues</title>
+<link href="../../book.css" type="text/css" rel="stylesheet"></head>
+<body>
+
+<h2>Reported library analysis issues</h2>
+<table width="500" border="1" cellspacing="1" cellpadding="2">
+<colgroup>
+<col width="41*">
+<col width="155*"></colgroup>
+<tbody>
+<thead>
+<tr bgcolor="#ACD79B">
+<th><p><b>Issue</b></p></th>
+<td><p><b>Explanation</b></p></td>
+</tr>
+</thead>
+<tr>
+<th align="center"><p>Library removed</p></th>
+<td><p>If a library is found in the baseline but not in the target, the message <b>
+Library is no longer available</b> is printed on the report.</p></td>
+</tr>
+<tr>
+<th align="center"><p>Library added</p></th>
+<td><p>If a library is found in the target but not in the baseline, the message <b>
+Library has been added</b> is printed on the report.</p></td>
+</tr>
+<tr>
+<th align="center"><p>Function moved</p></th>
+<td><p>If a function has a match in the target, but at a different ordinal,
+the message <b>Function has moved</b> is printed on the report together with
+the function name and its original and new position.</p><h5>For example</h5><p><code>
+Function has moved  CClkAlmModel::ClockAlarmInfo(int, SClockAlarmInfo &amp;)
+const @ 3 => @ 4</code></p></td>
+</tr>
+<tr>
+<th align="center"><p>Function removed</p></th>
+<td><p>If a function has no match in the target, and either the target has
+no function at the ordinal or the function at the ordinal in the target matches
+some other function in the baseline, the message <b>Function has been removed
+</b> is printed on the report together with the function name and position.
+</p><h5>For example</h5><p><code>Function has been removed CClkAlmModel::ClockAlarmSet(int,
+SClockAlarmInfo const &amp;) @ 4 </code></p></td>
+</tr>
+<tr>
+<th align="center"><p>Function modified</p></th>
+<td><p>If the function has no match in the target and the target has a function
+at the ordinal that does not match any baseline function, the message <b>
+Function has been modified </b> is printed on the report together with the
+name and position of both the function found in the baseline and the function
+found in the target. </p><h5>For example</h5><p><code>Function has been modified
+CContactDatabase::SetCntServerHeapFailure(RHeap::TAllocFail, int) @ 221 =>
+CContactDatabase::SetCntServerHeapFailure(int, int) @ 221</code></p> <p>However,
+the tool considers the following changes between functions as matches, and
+does not report them: <br>1. Change a non-const function parameter to const. <br>2.
+Change a non-const function to const.</p></td>
+</tr>
+<tr>
+<th align="center"><p>Function inserted</p></th>
+<td><p>If the baseline has no match for the function and the function has
+been inserted to a slot where the baseline function at the ordinal has been
+matched to something else, the message <b>Function has been inserted</b> is
+printed on the report together with the name and position of the new function.
+</p><h5>For example</h5><p><code>Function has been inserted CClkAlmModel::ClockAlarmSet(SClockAlarmInfo
+const &amp;) @ 5</code></p></td>
+</tr>
+<tr>
+<th><p>Function added</p></th>
+<td><p>If the baseline has no function at the corresponding ordinal of the
+target, and the function has been added to a new slot at the bottom of the
+list, the message <b>Function has been added</b> is printed on the report
+together with the name and position of the new function.</p><h5>For example
+</h5><p><code>Function has been added CContactDatabase::ICCTemplateIdL(void)
+@ 411</code></p></td>
+<tr>
+<th align="center" height="30"><p>DLL removed</p></th>
+<td height="30"><p>If a DLL is found in the baseline but not in the target,
+the message <b>DLL is missing</b> is printed on the report.</p></td>
+</tr>
+<tr>
+<th align="center"><p>UID1 modified</p></th>
+<td><p>UID1 indicates the structure of the file, for example, whether it is
+an executable, a DLL, or a file store.  </p><p>If the UID1 in the target does
+not match UID1 in baseline, the message <b>Target type/UID1 has been changed
+</b> is printed on the report.</p></td>
+</tr>
+<tr>
+<th align="center"><p>UID2 modified</p></th>
+<td><p>The meaning of UID2 depends on the type of object it applies to.</p><ul>
+<li>For polymorphic interface DLLs, UID2 identifies the interface that the
+DLL implements.</li>
+<li>For static interface DLLs that others link to, the UID2 value is always
+the same. </li>
+<li>For executables (with the exception of GUI applications), the UID2 value
+is ignored. </li>
+</ul><p>If the UID2 in the target does not match UID2 in baseline, the message <b>
+UID3 has been changed</b> is printed on the report.</p></td>
+</tr>
+<tr>
+<th align="center"><p>UID3 modified</p></th>
+<td><p>UID3 distinguishes between objects with the same UID2 and can be thought
+of as a project identifier. For example, for an application, the same UID3
+is shared by the executable, registration file, and all documents.</p><p>
+If the UID3 in the target does not match UID3 in baseline, the message <b>
+UID3 has been changed</b> is printed on the report.</p></td>
+</tr>
+<tr>
+<th align="center" height="27"><p>Secure ID modified</p></th>
+<td height="27"><p>In OS versions with platform security, the Secure ID (SID)
+for a binary is taken to be the same as the third UID for that file. If an
+application does not specify a UID3 or specifies it as zero, then the Secure
+ID is undefined for the application. This has several consequences, including
+lack of privacy for data used by that application. </p><p>If the Secure ID
+in the target does not match Secure ID in baseline, the message <b>Secure
+ID has been changed</b> is printed on the report.</p></td>
+</tr>
+<tr>
+<th align="center" height="27"><p>Capability modified</p></th>
+<td height="27"><p>If any of the capability of the baseline DLL is missing
+from the target DLL, the message <b>Capability has been changed
+</b> is printed on the report.</p></td>
+</tr>
+</tbody>
+<tbody>
+<thead>
+
+</tbody>
+</table>
+
+<div id="footer">Copyright &copy; 2008, 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. 
+License: <a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>.</div> 
+</body>
+</html>

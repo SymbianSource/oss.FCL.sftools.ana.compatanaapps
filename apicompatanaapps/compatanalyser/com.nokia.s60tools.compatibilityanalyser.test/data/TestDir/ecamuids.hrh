@@ -1,0 +1,85 @@
+// ECamUids.hrh
+//
+// Copyright (c) Symbian Software Ltd 2003-2006. All rights reserved.
+//
+/** 
+@publishedAll
+@released
+@file
+*/ 
+
+#ifndef __ECAMUIDS_HRH__
+#define __ECAMUIDS_HRH__
+
+#define KSharedLibraryUidDefine  268435597
+#define KUidOnboardCameraLibrary 270513347
+
+#define KUidECamAdvSettingsLibrary 		0x1020E76B
+
+#define	KUidOnboardCameraPlugin			0x1020707F
+#define KUidOnboardCameraInfoPlugin 	0x10207080
+#define KUidOnboardCameraStubDll		0x10207081
+#define KUidOnboardCameraStubPlugin 	0x10207082
+#define KUidOnboardCameraStubInfo		0x10207083
+
+#define	KUidECamHistogramLibrary		0x102737AC
+#define	KUidECamOverlayLibrary			0x102737AD
+#define	KUidECamSnapshotLibrary			0x102737AE 
+
+/**
+@publishedPartner
+@prototype
+*/
+
+#define	KUidECamDirectViewFinderLibrary 0x102825F3 
+
+/**
+Defines the numerical value for KUidECamEventClass2.
+@see KUidECamEventClass2
+@publishedPartner
+@prototype
+*/
+#define KUidECamEventClass2UidValue  							0x10282622
+
+/**
+Defines the numerical value for KUidECamEventCIPSetColorSwapEntry.
+@see KUidECamEventCIPSetColorSwapEntry
+@publishedPartner
+@prototype
+*/
+#define KUidECamEventCIPSetColorSwapEntryUidValue  				0x10282623
+
+/**
+Defines the numerical value for KUidECamEventCIPRemoveColorSwapEntry.
+@see KUidECamEventCIPRemoveColorSwapEntry
+@publishedPartner
+@prototype
+*/
+#define KUidECamEventCIPRemoveColorSwapEntryUidValue			0x10282624
+
+/**
+Defines the numerical value for KUidECamEventCIPSetColorAccentEntry.
+@see KUidECamEventCIPSetColorAccentEntry
+@publishedPartner
+@prototype
+*/
+#define KUidECamEventCIPSetColorAccentEntryUidValue				0x10282625
+
+/**
+Defines the numerical value for KUidECamEventCIPRemoveColorAccentEntry.
+@see KUidECamEventCIPRemoveColorAccentEntry
+@publishedPartner
+@prototype
+*/
+#define KUidECamEventCIPRemoveColorAccentEntryUidValue			0x10282626
+
+/**
+Defines the numerical value for KUidECamEventCameraSettingPreCaptureWarning.
+@see KUidECamEventCameraSettingPreCaptureWarning
+@publishedPartner
+@prototype
+*/
+#define KUidECamEventCameraSettingPreCaptureWarningUidValue		0x10282610
+
+#endif
+

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Selecting the analysis type, baseline profile and current SDK</title>
+<link href="../../book.css" type="text/css" rel="stylesheet"></head>
+<body>
+
+<h2>Selecting the analysis type, baseline profile and current SDK</h2>
+<h5>Before you start</h5>
+<p>Install the necessary SDKs and configure them to Carbide.c++. For more information, 
+see <a href="../concepts/software_development_kit.htm">Software
+Development Kit (SDK)</a>.</p>
+<ol>
+<li>To start the analysis, do any of the following:
+	<ul>
+	<li>Go to <b>Carbide > Compatibility Analyser</b>.</li>
+	<li>Right-click your EXE or DLL project in the Project Explorer and select 
+	<b>Compatibility Analyser > Run static analysis for this project...</b>.</li>
+	<li>Right-click any folder in your project and select either of the following:
+		<ul>
+		<li>To fetch all header files from the selected folder: <b>Compatibility Analyser > 
+		Run static analysis for this directory in project...</b> </li>
+		<li>To fetch header files, user and system Includes and forced headers from the 
+		parent project: <b>Compatibility Analyser > Run static analysis for this project...</b></li>
+		</ul>
+	</li>
+	</ul>
+</li>
+<li>Select at least one analysis type: <b>Headers</b> or <b>Libraries</b>.</li>
+<li>Select the baseline profile in any of the following ways:
+	<ul>
+	<li>If profiles are already created, select one of them.</li>
+	<li>The tool provides predefined profiles for certain released SDKs. Select a predefined baseline profile (of needed sdk version), from the drop down. Headers and libraries of the selected SDK will be downloaded to the path 
+	<em>c:\apps\ca-baselines</em>.</li>
+	<li>If no profiles exist, click <b>Configure Baseline Profile</b> to create them. 
+	See the instructions in <a href="../tasks/configuring_baselineprofile.htm">
+	Creating or editing the baseline profile</a>.</li>
+	</ul>
+</li>
+<li>Select the current SDK and Symbian version from the available ones in the list. </li>
+<li>Click <b>Next</b> to start specifying header and/or library files.</li>
+</ol>
+
+<h5>Related tasks</h5>
+<ul>
+	<li><a href="selecting_headerfiles_for_analysis.htm">Selecting header files for analysis</a></li>
+	<li><a href="selecting_libraryfiles_for_analysis.htm">Selecting library files for analysis</a></li>
+</ul>
+
+<h5>Related concepts</h5>
+<ul>
+	<li><a href="../concepts/file_handling.htm">File handling in project and folder analysis</a></li>
+</ul>
+
+<div id="footer">Copyright &copy; 2008, 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. 
+License: <a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>.</div>
+</body>
+</html>

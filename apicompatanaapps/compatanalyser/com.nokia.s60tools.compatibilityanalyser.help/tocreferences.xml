@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="References" link_to="toc.xml#references" > 
+	<topic label="Toolbar" href="html/references/toolbar.htm" />
+	<topic label="Messages and notifications" href="html/references/messages.htm" />
+	<topic label="Reported Binary Compatibility issues" href="html/references/reported_binary_compatibilityissues.htm" />
+	<topic label="Reported library analysis issues" href="html/references/reported_issues_to_libraryanalysis.htm" />
+
+</toc>

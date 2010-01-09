@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Messages and notifications</title>
+<link href="../../book.css" type="text/css" rel="stylesheet"></head>
+<body>
+
+<h2>Messages and notifications</h2>
+<p>The following table lists the messages that may be displayed when analysing files and filtering reports.
+</p>
+
+<table width="683" border="1" cellspacing="1" cellpadding="2">
+<colgroup>
+<col width="77*">
+<col width="103*">
+<col width="101*"></colgroup>
+<thead>
+<tr bgcolor="#D0D0D0">
+<th height="28"><b>Message</b></th>
+<th><b>Explanation</b></th>
+<th height="28"><b>Action</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="code">No filetypes are specified. Specify type of files to
+be analysed.</code></td>
+<td><p>Both analysis type check boxes are unchecked in the analysis type selection
+page. </p></td>
+<td><p>Select at least one type of analysis (headers and/or libraries).</p></td>
+</tr>
+<tr>
+<td><code class="code">Version string cannot be null</code></td>
+<td><p>The Symbian SDK version list box is empty.</p></td>
+<td><p>Select or type in the version number of the selected SDK in the product
+SDK version list box.</p></td>
+</tr>
+<tr>
+<td><code class="code"> Root directory can not be null</code></td>
+<td><p>On the headers page, the directory path is empty under the header selection
+group.</p></td>
+<td><p>Type in or browse for the directory path of header files.</p></td>
+</tr>
+<tr>
+<td><code class="code">No header files are selected. Select files to be analysed.
+</code></td>
+<td><p>In the headers analysis page, the header file list is empty.</p></td>
+<td><p>Add headers using the <b>Add files</b> button. </p></td>
+</tr>
+<tr>
+<td><code class="code">Select header types to be analysed.</code></td>
+<td><p>On the header analysis page, nothing is selected under the <b>Selection
+of file types to be analysed</b> group.</p></td>
+<td><p>Select file types from the four options (.h , .hrh , .mbg , .rsg).
+</p></td>
+</tr>
+<tr>
+<td><code class="code"> Selected types do not match with the selected header
+files.</code></td>
+<td><p>Files added to the headers list in the header analysis page do not
+match with the file types selected.</p> <p>For example, .mbg or.rsg files
+cannot be selected for header analysis.</p></td>
+<td><p>Remove all the files from the list or add only the files of the selected
+type. In addition, you can also check types of files in the list.</p></td>
+</tr>
+<tr>
+<td><code class="code">No platform header paths are defined. This may cause
+compilation errors.</code></td>
+<td><p>On the platform headers page, the list of system <i>include</i> paths
+is empty.</p></td>
+<td><p>Add system <i>include</i> paths using the <b>Add includes</b> button.
+</p></td>
+</tr>
+<tr>
+<td><code class="code"> No library files are selected for analysis.</code></td>
+<td><p>On the library analysis page, the library list is empty.</p></td>
+<td><p>Add library files using the <b>Add files</b> button.</p></td>
+</tr>
+<tr>
+<td><code class="code"> No Baseline Profiles are Selected.</code></td>
+<td><p>No baseline profiles are created and the list box on the baseline selection
+page is empty.</p></td>
+<td><p>Click the <b>Configure Baseline profile</b> button to start creating
+a profile.</p></td>
+</tr>
+<tr>
+<td><code class="code">Report FileName can not be null.</code></td>
+<td><p>The filename is empty on the <b>Report file configuration</b> page.
+</p></td>
+<td><p>Type any name into the text field.</p></td>
+</tr>
+<tr>
+<td><code class="code">Report File Path can not be null.</code></td>
+<td><p>The output path directory of the reports is empty.</p></td>
+<td><p>Provide the directory path using the <b>Browse</b> button.</p></td>
+</tr>
+<tr>
+<td><code class="code">Add minimum one report file.</code></td>
+<td><p>In the <b>Report Filter Wizard</b>, the list of report files is empty.
+</p></td>
+<td><p>Add report files to be filtered.</p></td>
+</tr>
+<tr>
+<td><code class="code"> Checkbc.py file missing in given directory.</code></td>
+<td><p>The selected core tools version does not contain <i>checkbc.py</i> file.
+</p></td>
+<td><p>Select a valid core tools package from the <b>Preferences</b> page.
+</p></td>
+</tr>
+<tr>
+<td><code class="code"> Coretools are not compatible. <br>Or:<br>Invalid data
+version of core tools. Please check the core tools.</code></td>
+<td><p>The data version of the selected core tools does not match the Compatibility
+Analyser tool.</p></td>
+<td><p>Select a valid core tools package from the <b>Preferences</b> page.
+</p></td>
+</tr>
+<tr>
+<td><code class="code">Select profile from the list</code></td>
+<td><p>No profile is selected in the profile combo box.</p></td>
+<td><p>Select a profile from the list if profiles already exist. Or, click
+the <b>Configure Baseline profile</b> button to start creating a profile.
+</p></td>
+</tr>
+<tr>
+<td><code class="code">Given coretools are not compatible. Currently supported
+DATAVERSION is -. Would you like run the analysis with the default core tools?
+</code></td>
+<td><p>The selected core tools are not compatible with tool.</p></td>
+<td><p>Click <b>Yes</b> to run the analysis with the default tools provided
+by the tool. </p></td>
+</tr>
+<tr>
+<td><code class="code">Please update the com.nokia.s60tools.compatibilityanalyser.corecomponents
+plugin. The one being used is incompatible with the tool.</code></td>
+<td><p>The core tool version provided by the tool is invalid.</p></td>
+<td><p>Update the core components plugin from <b>Software updates > Find and
+install&hellip;</b></p></td>
+</tr>
+<tr>
+<td height="26"><code class="code">I/O error while opening the connection.
+Please check the - Internet connection &amp; Provided URL</code></td>
+<td height="26"><p>If you are not connected to the intranet while downloading
+core tools or baseline profiles. </p></td>
+<td height="26"><p>Connect to the intranet.</p></td>
+</tr>
+<tr>
+<td height="26"><code class="code">DSO paths list cannot be empty.</code></td>
+<td height="26"><p>The DSO path list is empty on the library analysis page.
+</p></td>
+<td height="26"><p>Add a minimum of one directory of .lib/.dso files. </p></td>
+</tr>
+<tr>
+<td height="26"><code class="code">DLL paths list cannot be empty.</code></td>
+<td><p>The DLL path list is empty on the library analysis page.</p></td>
+<td><p>Add a minimum of one directory of .dll files.</p></td>
+</tr>
+</tbody>
+</table>
+
+<div id="footer">Copyright &copy; 2008, 2009 Nokia Corporation and/or its subsidiary(-ies). All rights reserved. 
+License: <a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>.</div> 
+</body>
+</html>
