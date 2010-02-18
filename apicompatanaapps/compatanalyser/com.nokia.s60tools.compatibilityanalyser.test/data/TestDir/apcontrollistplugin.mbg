@@ -1,8 +1,0 @@
- 
-/* This file has been generated, DO NOT MODIFY. */
-enum TMifApcontrollistplugin
-	{
-	EMbmApcontrollistpluginQgn_prop_set_conn_acl = 16384,
-	EMbmApcontrollistpluginQgn_prop_set_conn_acl_mask = 16385,
-	EMbmApcontrollistpluginLastElement
-	};

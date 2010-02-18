@@ -1,3 +1,0 @@
-#define R_AI_PERS_PROF_TOGGLE                     0x6844003
-#define R_SU_NOTE_INSERT_SIM                      0x6844004
-#define R_AI_LEAVE_OFFLINE_MODE_QUERY             0x6844005

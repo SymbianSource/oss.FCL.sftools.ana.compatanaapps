@@ -1,8 +1,0 @@
- 
-/* This file has been generated, DO NOT MODIFY. */
-enum TMifAicalendarplugin2
-	{
-	EMbmAicalendarplugin2Qgn_indi_ai_cale = 16384,
-	EMbmAicalendarplugin2Qgn_indi_ai_cale_mask = 16385,
-	EMbmAicalendarplugin2LastElement
-	};
